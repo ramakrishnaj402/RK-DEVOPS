@@ -1,7 +1,7 @@
 
 
 node {
-	stage ('GIT')
+	stage ('GIT-SCM')
 	{
 	checkout scm
 	}
