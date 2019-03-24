@@ -9,5 +9,8 @@ node {
 	{
 	sh 'mvn package'
 	}
-
+	stage('deploy')
+	{
+	sh 'docker images'
+	}
 }
