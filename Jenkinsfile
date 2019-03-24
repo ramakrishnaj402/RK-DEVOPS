@@ -11,6 +11,6 @@ node {
 	}
 	stage('deploy')
 	{
-	sh 'docker images'
+	sh 'sudo docker images'
 	}
 }
