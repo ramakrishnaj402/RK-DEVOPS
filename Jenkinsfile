@@ -11,6 +11,6 @@ node {
 	}
 	stage('deploy')
 	{
-	sh 'sudo docker images'
+	sh 'id'
 	}
 }
