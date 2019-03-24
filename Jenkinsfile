@@ -11,6 +11,6 @@ node {
 	}
 	stage('deploy')
 	{
-	sh 'id'
+	sh 'docker ps'
 	}
 }
