@@ -3,11 +3,11 @@ node
     stage('Git Checkout'){
 	checkout scm 
     }
-    stage('mvn'){
+    stage('BUILD'){
 
    sh 'mvn package'
    }
-   stage('Build Docker Imager'){
+   stage('Docker Imager & DEPLOY'){
    sh 'docker build -t depoly .'
    sh 'docker images'
    sh 'docker run -dti --name cnt1 -p 8082:8080 depoly /bin/bash'
