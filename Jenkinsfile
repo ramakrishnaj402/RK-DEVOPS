@@ -10,6 +10,6 @@ node
    	sh 'docker build -t depoly .'
    }
     stage('Deploy to Dev Environment'){
-   	 def dockerRun = 'docker run -dti --name cnt1 -p 8082:8080 deploy /bin/bash'   
+   	 sh 'docker run -dti --name cnt1 -p 8082:8080 deploy /bin/bash'   
     }
 }
