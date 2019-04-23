@@ -6,7 +6,7 @@ node
     stage('BUILD'){
 
    sh 'mvn package'
-   sh 'cp -b /var/lib/jenkins/workspace/git-build-docker_deploy/gameoflife-web/target/gameoflife.war /var/lib/jenkins/workspace/git-build-docker_deploy'
+   sh 'cp -b /var/lib/jenkins/workspace/git-build-docker_deploy/gameoflife-web/target/gameoflife.war /var/lib/jenkins/workspace/git-build-docker_deploy/target'
     }
    stage('Docker Imager & DEPLOY'){
    sh 'docker build -t depoly .'
