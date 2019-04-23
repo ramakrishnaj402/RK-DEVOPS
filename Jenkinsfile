@@ -9,6 +9,8 @@ node
    }
    stage('Build Docker Imager'){
    sh 'docker build -t depoly .'
-    def dockerRun = 'docker run -dti --name cnt1 -p 8082:8080 deploy /bin/bash'   
+   }
+	stage('deploy'){
+    sh 'docker run -dti --name cnt1 -p 8082:8080 deploy /bin/bash'   
     }
 }
