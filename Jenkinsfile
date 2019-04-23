@@ -1,15 +1,14 @@
 node
 {
-    stage('Git Checkout'){
-	checkout scm    }
-   stage('Build')
-	{
+stage('Git Checkout'){
+	checkout scm   
+    }
+stage('Build'){
 	sh 'mvn package'
 	}
-   stage('Build Docker Imager'){
-   	sh 'docker build -t depoly .'
-   }
-    stage('Deploy to Dev Environment'){
-   	 sh 'docker run -dti --name cnt1 -p 8082:8080 deploy /bin/bash'   
+stage('Build Docker Imager'){
+   	sh 'docker build -t depoly .' {
+   	 	sh 'docker run -dti --name cnt1 -p 8082:8080 deploy /bin/bash' 
+	}
     }
 }
