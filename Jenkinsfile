@@ -7,7 +7,7 @@ node
 	sh 'mvn package'
 	}
 stage('Build Docker Imager'){
-	docker images
+	sh 'docker images'
 	}
 
    	
