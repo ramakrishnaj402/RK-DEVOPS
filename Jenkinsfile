@@ -2,9 +2,10 @@ node
 {
     stage('Git Checkout'){
 	checkout scm    }
-    stage('mvn'){
-	sh 'clean package'
-   }
+   stage('Build')
+	{
+	sh 'mvn package'
+	}
    stage('Build Docker Imager'){
    	sh 'docker build -t depoly .'
    }
