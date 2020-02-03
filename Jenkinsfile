@@ -11,7 +11,7 @@ node
    stage('Docker Imager & DEPLOY'){
    sh 'docker build -t depoly .'
    sh 'docker images'
-   sh 'docker run -dti --name cnt2 -p 8082:8080 depoly /bin/bash'
+   sh 'docker run -dti --name cnt3 -p 8082:8080 depoly /bin/bash'
    sh 'docker ps -a'
     }
 }
