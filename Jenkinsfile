@@ -13,9 +13,6 @@ node
    sh 'docker images'
    sh 'docker run -dti --name cnt5 -p 8082:8080 depoly /bin/bash'
    sh 'docker ps -a'
-	   sh 'docker attach cnt5'
-	   sh 'cd /usr/local/tomcat/bin'
-	   sh  'starup.sh'
-
+	 
     }
 }
